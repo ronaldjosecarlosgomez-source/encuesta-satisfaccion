@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Test de Satisfacción Laboral</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:18px auto;max-width:900px;padding:0 16px;color:#111}
+    h1{margin-bottom:6px}
+    .card{border:1px solid #e6e6e6;padding:14px;border-radius:10px;margin:12px 0;box-shadow:0 2px 6px rgba(0,0,0,.03)}
+    .q-title{font-weight:600;margin-bottom:6px}
+    .scale-row{display:flex;gap:8px;flex-wrap:wrap}
+    .scale-row label{display:flex;flex-direction:column;align-items:center;font-size:.9rem;width:44px}
+    .result{background:#f6f9ff;padding:12px;border-radius:8px;margin-top:12px}
+    .small{font-size:.9rem;color:#555}
+    button{background:#2563eb;color:white;border:0;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}
+    button.secondary{background:#666;margin-left:8px}
+  </style>
+</head>
+<body>
+  <h1>Escala General de Satisfacción Laboral</h1>
+  <p class="small">
+    De los siguientes aspectos que se relacionan con el puesto de trabajo, selecciona
+    cómo te sientes respecto a cada uno, de acuerdo a la escala indicada. Al finalizar,
+    suma la puntuación que elegiste para cada bloque de preguntas.
+    <br><br><strong>Escala:</strong>
+    <br>1 - Muy insatisfecho
+    <br>2 - Insatisfecho
+    <br>3 - Moderadamente insatisfecho
+    <br>4 - Ni insatisfecho, ni satisfecho
+    <br>5 - Moderadamente satisfecho
+    <br>6 - Satisfecho
+    <br>7 - Muy satisfecho
+  </p>
+
+  <form id="testForm" class="card" novalidate>
+    <label>
+      Nombre:
+      <input id="nombre" name="nombre" type="text" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ccc" />
+    </label>
+
+    <!-- ================= Preguntas Intrínsecas ================= -->
+    <section class="card">
+      <h2 style="font-size:1rem">A. Satisfacción intrínseca</h2>
+      <div class="q"><div class="q-title">1. Libertad para elegir tu propio método de trabajo.</div><div class="scale-row">
+        <label><input type="radio" name="q1" value="1" required>1</label><label><input type="radio" name="q1" value="2">2</label><label><input type="radio" name="q1" value="3">3</label><label><input type="radio" name="q1" value="4">4</label><label><input type="radio" name="q1" value="5">5</label><label><input type="radio" name="q1" value="6">6</label><label><input type="radio" name="q1" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">2. Reconocimiento que obtienes por el trabajo bien hecho.</div><div class="scale-row">
+        <label><input type="radio" name="q2" value="1" required>1</label><label><input type="radio" name="q2" value="2">2</label><label><input type="radio" name="q2" value="3">3</label><label><input type="radio" name="q2" value="4">4</label><label><input type="radio" name="q2" value="5">5</label><label><input type="radio" name="q2" value="6">6</label><label><input type="radio" name="q2" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">3. Responsabilidad que tienes asignada.</div><div class="scale-row">
+        <label><input type="radio" name="q3" value="1" required>1</label><label><input type="radio" name="q3" value="2">2</label><label><input type="radio" name="q3" value="3">3</label><label><input type="radio" name="q3" value="4">4</label><label><input type="radio" name="q3" value="5">5</label><label><input type="radio" name="q3" value="6">6</label><label><input type="radio" name="q3" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">4. La posibilidad de utilizar tus capacidades.</div><div class="scale-row">
+        <label><input type="radio" name="q4" value="1" required>1</label><label><input type="radio" name="q4" value="2">2</label><label><input type="radio" name="q4" value="3">3</label><label><input type="radio" name="q4" value="4">4</label><label><input type="radio" name="q4" value="5">5</label><label><input type="radio" name="q4" value="6">6</label><label><input type="radio" name="q4" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">5. Tus posibilidades de promocionar.</div><div class="scale-row">
+        <label><input type="radio" name="q5" value="1" required>1</label><label><input type="radio" name="q5" value="2">2</label><label><input type="radio" name="q5" value="3">3</label><label><input type="radio" name="q5" value="4">4</label><label><input type="radio" name="q5" value="5">5</label><label><input type="radio" name="q5" value="6">6</label><label><input type="radio" name="q5" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">6. La atención que se presta a las sugerencias que haces.</div><div class="scale-row">
+        <label><input type="radio" name="q6" value="1" required>1</label><label><input type="radio" name="q6" value="2">2</label><label><input type="radio" name="q6" value="3">3</label><label><input type="radio" name="q6" value="4">4</label><label><input type="radio" name="q6" value="5">5</label><label><input type="radio" name="q6" value="6">6</label><label><input type="radio" name="q6" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">7. La variedad de tareas que realizas en tu trabajo.</div><div class="scale-row">
+        <label><input type="radio" name="q7" value="1" required>1</label><label><input type="radio" name="q7" value="2">2</label><label><input type="radio" name="q7" value="3">3</label><label><input type="radio" name="q7" value="4">4</label><label><input type="radio" name="q7" value="5">5</label><label><input type="radio" name="q7" value="6">6</label><label><input type="radio" name="q7" value="7">7</label></div></div>
+    </section>
+
+    <!-- ================= Preguntas Extrínsecas ================= -->
+    <section class="card">
+      <h2 style="font-size:1rem">B. Satisfacción extrínseca</h2>
+      <div class="q"><div class="q-title">8. Condiciones físicas de tu trabajo.</div><div class="scale-row">
+        <label><input type="radio" name="q8" value="1" required>1</label><label><input type="radio" name="q8" value="2">2</label><label><input type="radio" name="q8" value="3">3</label><label><input type="radio" name="q8" value="4">4</label><label><input type="radio" name="q8" value="5">5</label><label><input type="radio" name="q8" value="6">6</label><label><input type="radio" name="q8" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">9. Tus compañeros de trabajo.</div><div class="scale-row">
+        <label><input type="radio" name="q9" value="1" required>1</label><label><input type="radio" name="q9" value="2">2</label><label><input type="radio" name="q9" value="3">3</label><label><input type="radio" name="q9" value="4">4</label><label><input type="radio" name="q9" value="5">5</label><label><input type="radio" name="q9" value="6">6</label><label><input type="radio" name="q9" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">10. Tu superior inmediato.</div><div class="scale-row">
+        <label><input type="radio" name="q10" value="1" required>1</label><label><input type="radio" name="q10" value="2">2</label><label><input type="radio" name="q10" value="3">3</label><label><input type="radio" name="q10" value="4">4</label><label><input type="radio" name="q10" value="5">5</label><label><input type="radio" name="q10" value="6">6</label><label><input type="radio" name="q10" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">11. Tu salario.</div><div class="scale-row">
+        <label><input type="radio" name="q11" value="1" required>1</label><label><input type="radio" name="q11" value="2">2</label><label><input type="radio" name="q11" value="3">3</label><label><input type="radio" name="q11" value="4">4</label><label><input type="radio" name="q11" value="5">5</label><label><input type="radio" name="q11" value="6">6</label><label><input type="radio" name="q11" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">12. Relación entre dirección y trabajadores en la empresa.</div><div class="scale-row">
+        <label><input type="radio" name="q12" value="1" required>1</label><label><input type="radio" name="q12" value="2">2</label><label><input type="radio" name="q12" value="3">3</label><label><input type="radio" name="q12" value="4">4</label><label><input type="radio" name="q12" value="5">5</label><label><input type="radio" name="q12" value="6">6</label><label><input type="radio" name="q12" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">13. El modo en que la empresa está gestionada.</div><div class="scale-row">
+        <label><input type="radio" name="q13" value="1" required>1</label><label><input type="radio" name="q13" value="2">2</label><label><input type="radio" name="q13" value="3">3</label><label><input type="radio" name="q13" value="4">4</label><label><input type="radio" name="q13" value="5">5</label><label><input type="radio" name="q13" value="6">6</label><label><input type="radio" name="q13" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">14. Tu horario de trabajo.</div><div class="scale-row">
+        <label><input type="radio" name="q14" value="1" required>1</label><label><input type="radio" name="q14" value="2">2</label><label><input type="radio" name="q14" value="3">3</label><label><input type="radio" name="q14" value="4">4</label><label><input type="radio" name="q14" value="5">5</label><label><input type="radio" name="q14" value="6">6</label><label><input type="radio" name="q14" value="7">7</label></div></div>
+
+      <div class="q"><div class="q-title">15. Tu estabilidad en el empleo.</div><div class="scale-row">
+        <label><input type="radio" name="q15" value="1" required>1</label><label><input type="radio" name="q15" value="2">2</label><label><input type="radio" name="q15" value="3">3</label><label><input type="radio" name="q15" value="4">4</label><label><input type="radio" name="q15" value="5">5</label><label><input type="radio" name="q15" value="6">6</label><label><input type="radio" name="q15" value="7">7</label></div></div>
+    </section>
+
+    <div style="margin-top:12px">
+      <button type="submit">Calcular resultado</button>
+      <button type="button" id="resetBtn" class="secondary">Reiniciar</button>
+    </div>
+
+    <div id="output" class="result" style="display:none" aria-live="polite">
+      <h3 id="outTitle"></h3>
+      <p id="outIntrinsic"></p>
+      <p id="outExtrinsic"></p>
+    </div>
+  </form>
+
+  <script>
+    const form = document.getElementById('testForm');
+    const output = document.getElementById('output');
+    const outTitle = document.getElementById('outTitle');
+    const outIntrinsic = document.getElementById('outIntrinsic');
+    const outExtrinsic = document.getElementById('outExtrinsic');
+    const resetBtn = document.getElementById('resetBtn');
+
+    const intrinsicNames = ['q1','q2','q3','q4','q5','q6','q7'];
+    const extrinsicNames  = ['q8','q9','q10','q11','q12','q13','q14','q15'];
+
+    function sumAnswers(names){
+      let s = 0;
+      for(const n of names){
+        s += Number(form[n].value || 0);
+      }
+      return s;
+    }
+
+    function interpretIntrinsic(score){
+      if(score >= 7 && score <= 20) return "No estás satisfecho con lo que haces en tu trabajo";
+      if(score >= 21 && score <= 35) return "Te gusta lo que haces pero podría mejorar";
+      if(score >= 36 && score <= 49) return "Te gusta y estás satisfecho con lo que haces en tu trabajo";
+      return "Resultado fuera de rango";
+    }
+
+    function interpretExtrinsic(score){
+      if(score >= 8 && score <= 23) return "No estás satisfecho con lo que haces en tu trabajo";
+      if(score >= 24 && score <= 40) return "Te gusta lo que haces pero podría mejorar";
+      if(score >= 41 && score <= 56) return "Te gusta y estás satisfecho con lo que haces en tu trabajo";
+      return "Resultado fuera de rango";
+    }
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+
+      for(const name of [...intrinsicNames, ...extrinsicNames]){
+        if(!form.querySelector('input[name="'+name+'"]:checked')){
+          alert('Por favor responde todas las preguntas.');
+          return;
+        }
+      }
+
+      const nombre = document.getElementById('nombre').value.trim() || 'Sin nombre';
+      const sumIntrinsic = sumAnswers(intrinsicNames);
+      const sumExtrinsic = sumAnswers(extrinsicNames);
+
+      outTitle.textContent = `Resultados para: ${nombre}`;
+      outIntrinsic.innerHTML = `<strong>Satisfacción intrínseca:</strong> ${sumIntrinsic} puntos. ${interpretIntrinsic(sumIntrinsic)}`;
+      outExtrinsic.innerHTML = `<strong>Satisfacción extrínseca:</strong> ${sumExtrinsic} puntos. ${interpretExtrinsic(sumExtrinsic)}`;
+
+      output.style.display = 'block';
+      output.scrollIntoView({behavior:'smooth'});
+    });
+
+    resetBtn.addEventListener('click', ()=>{
+      form.reset();
+      output.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
